@@ -26,6 +26,14 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+FIXTURE_DIRS = (
+    '/home/damir/djangostudying/bin/_42cc_test/contacts/fixtures',
+)
+
+TEMPLATE_DIRS = (
+    '/home/damir/djangostudying/bin/_42cc_test/contacts/templates',
+    '/home/damir/djangostudying/bin/_42cc_test/templates',
+)
 
 # Application definition
 
@@ -36,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'contacts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,7 +67,7 @@ WSGI_APPLICATION = '_42cc_test.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'my_db.sqlite3'),
     }
 }
 
