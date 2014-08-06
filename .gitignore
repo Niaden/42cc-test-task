@@ -1,0 +1,9 @@
+*.pyc
+*.sqlite3
+*.css
+*.css.map
+*.eot
+*.svg
+*.ttf
+*.woff
+
