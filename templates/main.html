@@ -6,7 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="{% static "static/css/bootstrap.css" %}">
 </head>
 <body>
-	<h2>42 Coffee Cups Test Assignment</h2>
+	<h2><a href="/">42 Coffee Cups Test Assignment</a></h2>
 	{% block contacts %} {% endblock %}
+	{% block requests %} {% endblock %}
+	<hr>
+	<div><a href="/showrequests/">Requests</a></div>
 </body>
 </html>

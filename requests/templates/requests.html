@@ -1,8 +1,14 @@
-{% extends 'main.html '%}
+{% extends 'main.html' %}
 
 {% block requests %}
-<table>
-	
+<table border="1" style="width:90%" cellpadding="20px">
+	{% for request in requests %}
+		<tr>
+			<th>{{ request.request_date }}</th>
+			<th>{{ request.request_method }}</th>
+			<th>{{ request.request_path }}</th>
+		</tr>
+	{% endfor %}
 </table>
 
 {% endblock %}

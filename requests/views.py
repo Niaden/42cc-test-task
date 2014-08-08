@@ -4,4 +4,4 @@ from .models import Request
 
 # Create your views here.
 def show_requests(request):
- 	return HttpResponse('here lie honoroble requests')
+ 	return render(request, 'requests.html', {'requests': Request.objects.all()})
