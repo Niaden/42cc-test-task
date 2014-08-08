@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^showcontacts/', include('contacts.urls')),
+    url(r'^showrequests/', include('requests.urls')),
     url(r'^', include('contacts.urls')),
     
 )

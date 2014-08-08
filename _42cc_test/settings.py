@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'contacts',
     'south',
+    'requests',
 )
 
 MIDDLEWARE_CLASSES = (
