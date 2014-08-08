@@ -6,4 +6,13 @@
 *.svg
 *.ttf
 *.woff
-
+*.pyo
+*.swp
+*.swo
+*.swn
+*.esproj
+.idea
+.Ds_Store
+*~
+*.dat
+*db
