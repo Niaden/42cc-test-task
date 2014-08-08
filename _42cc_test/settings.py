@@ -56,6 +56,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'requests.middleware.WebRequestMiddleware',
 )
 
 ROOT_URLCONF = '_42cc_test.urls'
