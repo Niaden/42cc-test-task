@@ -1,21 +1,20 @@
 {% extends 'main.html' %}
 
 {% block contacts %}
-
-<div class="left">
-	<p>Name: {{ contacts.contacts_name }}</p>
-	<p>Last name: {{ contacts.contacts_lastname }}</p>
-	<p>Date of birth: {{ contacts.contacts_birthdate }}</p>
-	<br>
-	<p>Bio: {{ contacts.contacts_bio }}</p>
-</div>
-<br><br><br>
-<div class="right">
-	<p>Contacts</p>
-	<p>Email: {{ contacts.contacts_email }}</p>
-	<p>Jabber: {{ contacts.contacts_jabber }}</p>
-	<p>Skype: {{ contacts.contacts_skype }}</p>
-	<p>Other contacts: {{ contacts.contacts_othercontacts }}</p>
+<div class="row">
+	<div class="col-md-6">
+		<p>Name: {{ contacts.contacts_name }}</p>
+		<p>Last name: {{ contacts.contacts_lastname }}</p>
+		<p>Date of birth: {{ contacts.contacts_birthdate }}</p>
+		<p>Bio: {{ contacts.contacts_bio }}</p>
+	</div>
+	<div class="col-md-6">
+		<p>Contacts</p>
+		<p>Email: {{ contacts.contacts_email }}</p>
+		<p>Jabber: {{ contacts.contacts_jabber }}</p>
+		<p>Skype: {{ contacts.contacts_skype }}</p>
+		<p>Other contacts: {{ contacts.contacts_othercontacts }}</p>
+	</div>
 </div>
 
 {% endblock %}

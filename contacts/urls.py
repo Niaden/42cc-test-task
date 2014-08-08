@@ -6,5 +6,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'firstapp.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^', 'contacts.views.show_contacts'),
+    url(r'^$', 'contacts.views.show_contacts'),
 )
