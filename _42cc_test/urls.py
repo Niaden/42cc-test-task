@@ -13,5 +13,4 @@ urlpatterns = patterns('',
     url(r'^showcontacts/', include('contacts.urls')),
     url(r'^showrequests/', include('requests.urls')),
     url(r'^', include('contacts.urls')),
-    
 )
