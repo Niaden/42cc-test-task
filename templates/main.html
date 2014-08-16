@@ -2,14 +2,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tuiky's Test Assignment</title>
-	<link rel="stylesheet" type="text/css" href="{% static "static/css/bootstrap.css" %}">
+    <title>Tuiky's Test Assignment</title>
+    <link rel="stylesheet" type="text/css" href="{% static "static/css/bootstrap.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "static/css/dopstyle.css" %}">   
 </head>
 <body>
-	<h2><a href="/">42 Coffee Cups Test Assignment</a></h2>
-	{% block contacts %} {% endblock %}
-	{% block requests %} {% endblock %}
-	<hr>
-	<div><a href="/showrequests/">Requests</a></div>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 title">
+            <h3><a href="/">42 Coffee Cups Test Assignment</a></h3>
+        </div>
+        <div class="col-md-6 auth">
+            <ul>
+                {% if username %}
+                    <li><a href="/auth/logout/">Logout ({{ username }})</a></li>
+                {% else %}
+                    <li><a href="/auth/login/">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="col-md-12">
+            {% block auth_login %} {% endblock %}
+            {% block contacts %}   {% endblock %}
+            {% block requests %}   {% endblock %}
+            {% block editdata %}   {% endblock %}
+        </div>
+        
+        <div class="col-md-12 bot-nav">
+            <hr>
+            <ul>
+                <li><a href="/" class="btn btn-info">To the main page</a></li>
+                <li><a href="/auth/login/" class="btn btn-info">Authentication</a></li>
+                <li><a href="/showrequests/" class="btn btn-info">Show requests</a></li>
+                {% if username %}
+                    <li><a href="/editdata/" class="btn btn-info">edit data</a></li>
+                {% endif %}     
+            </ul>
+        </div>
+
+    </div>
+</div>
+
 </body>
 </html>

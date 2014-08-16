@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block editdata %}
+
+<h3>Edit your contacts, pls</h3>
+<form action="/postcontacts/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+    <div class="col-md-6">
+        <br>
+        <p>Name:          {{ form.contacts_name }}</p>
+        <p>Last name:     {{ form.contacts_lastname }}</p>
+        <p>Date of birth: {{ form.contacts_birthdate }}</p>
+        <p>Photo: {{ form.contacts_photo }} {{ form.contacts_photo_file }}</p>
+    </div>
+    <div class="col-md-6">
+        <p>Contacts</p>
+        <p>Email:   {{ form.contacts_email }}</p>
+        <p>Jabber:  {{ form.contacts_jabber }}</p>
+        <p>Skype:   {{ form.contacts_skype }}</p>
+        <p>Other contacts: <br>{{ form.contacts_othercontacts }}</p>
+        <p>Bio: <br>{{ form.contacts_bio }}</p>
+    </div>
+</div> 
+    <br>
+    <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

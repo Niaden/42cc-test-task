@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block auth_login %}
+    
+    <form class="auth-form" action="/auth/login/" method="post">
+    {% csrf_token %}
+        <div class="login_input">
+            <label for="username">Login name: </label>
+            <input type="text" name="username" id="username">
+        </div>
+        <br>
+        <div class="login_input">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+        </div>
+        <br>
+        {% if auth_error %}
+            <label>{{ auth_error }}</label>
+        {% endif %}
+        <input class="btn btn-block btn-primary" type="submit" value="Submit">
+    </form>
+
+{% endblock %}

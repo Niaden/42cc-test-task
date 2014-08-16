@@ -1,20 +1,34 @@
 {% extends 'main.html' %}
+{% load staticfiles %}
 
 {% block contacts %}
 <div class="row">
-	<div class="col-md-6">
-		<p>Name: {{ contacts.contacts_name }}</p>
-		<p>Last name: {{ contacts.contacts_lastname }}</p>
-		<p>Date of birth: {{ contacts.contacts_birthdate }}</p>
-		<p>Bio: {{ contacts.contacts_bio }}</p>
-	</div>
-	<div class="col-md-6">
-		<p>Contacts</p>
-		<p>Email: {{ contacts.contacts_email }}</p>
-		<p>Jabber: {{ contacts.contacts_jabber }}</p>
-		<p>Skype: {{ contacts.contacts_skype }}</p>
-		<p>Other contacts: {{ contacts.contacts_othercontacts }}</p>
-	</div>
+
+    <div class="col-md-5">
+        <p><b>Name:</b> {{ contacts.contacts_name }}</p>
+        <p><b>Last name:</b> {{ contacts.contacts_lastname }}</p>
+        <p><b>Date of birth:</b> {{ contacts.contacts_birthdate }}</p>
+        <p><b>Photo:</b></p>
+        <hr>
+        {{ MEDIA_URL }}{{ contacts.contacts_photo.name }}
+        <hr>
+        <br>
+        {% if contacts.contacts_photo %}
+            Photo:
+            <img src="/uploads/photos/IMG_20140719_212138.jpg" alt="photo">
+        {% endif %}
+        <hr>
+
+    </div>
+    <div class="col-md-5">
+        <p><b>Contacts</b></p>
+        <p><b>Email:</b> {{ contacts.contacts_email }}</p>
+        <p><b>Jabber:</b> {{ contacts.contacts_jabber }}</p>
+        <p><b>Skype:</b> {{ contacts.contacts_skype }}</p>
+        <p><b>Other contacts:</b> <br>{{ contacts.contacts_othercontacts }}</p>
+        <p class="bio"><b>Bio:</b> {{ contacts.contacts_bio }}</p>
+    </div>
+
 </div>
 
 {% endblock %}

@@ -10,8 +10,16 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import sys
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'uploads')
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = '/uploads/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -32,6 +40,7 @@ FIXTURE_DIRS = (
 
 TEMPLATE_DIRS = (
     '/home/damir/djangostudying/bin/_42cc_test/contacts/templates',
+    '/home/damir/djangostudying/bin/_42cc_test/loginsys/templates',
     '/home/damir/djangostudying/bin/_42cc_test/templates',
 )
 
@@ -49,6 +58,7 @@ INSTALLED_APPS = (
     'south',
     'requests',
     'context_processors',
+    'loginsys'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

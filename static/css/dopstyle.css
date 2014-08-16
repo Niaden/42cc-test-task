@@ -1,0 +1,87 @@
+.row{
+	position: relative;
+	height: 98%;
+}
+
+.bot-nav{
+	position: absolute;
+	bottom: 5%;
+}
+
+.bot-nav ul{
+	padding-left:0;
+	margin-bottom:0;
+}
+.bot-nav li{
+	display:inline-block;
+}
+
+.bot-nav hr{
+	border-top: 2px solid black;
+}
+
+.auth li{
+	display: inline-block;
+}
+
+.auth li a{
+	text-decoration: underline;
+}
+
+.auth, .title{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	height: 50px;	
+}
+
+.auth ul{
+	position: absolute;
+	top: 45%;
+	left: 40%;
+}
+
+.auth-form{
+	position: relative;
+	width: 300px;
+	top: 100px;
+	left: 25%;
+	padding: 15px;
+	border: 1px solid #bbb;
+}
+	
+}
+
+auth-form div{
+	margin: 5px;
+	padding: 5px;
+}
+
+.auth-form div input{
+	position: absolute;
+	right: 14px;
+}
+
+.title h3 a{
+	color: black;
+}
+.title h3 a:hover{
+text-decoration: none;
+}
+
+.container{
+	width: 62%;
+	height: 670px;
+  	background-color: #fff;
+}
+
+.bio{
+	margin-top: 35%;
+}
+
+.login_input input{
+	width: 170px;
+}
+
+.login_input label{
+	margin-top: 5px;
+}

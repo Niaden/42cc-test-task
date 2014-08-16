@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
 
 
 urlpatterns = patterns('',
@@ -7,4 +7,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', 'contacts.views.show_contacts'),
+    url(r'^editdata/$', 'contacts.views.edit_data'),
+    url(r'^postcontacts/$', 'contacts.views.post_contacts'),
 )

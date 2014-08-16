@@ -1,14 +1,15 @@
 {% extends 'main.html' %}
 
 {% block requests %}
-<table border="1" style="width:90%" cellpadding="20px">
-	{% for request in requests %}
-		<tr>
-			<th>{{ request.request_date }}</th>
-			<th>{{ request.request_method }}</th>
-			<th>{{ request.request_path }}</th>
-		</tr>
-	{% endfor %}
+<h4>First 10 requests:<h4/>
+<table class="table" border="1">
+    {% for request in requests %}
+        <tr>
+            <th>{{ request.request_date }}</th>
+            <th>{{ request.request_method }}</th>
+            <th>{{ request.request_path }}</th>
+        </tr>
+    {% endfor %}
 </table>
 
 {% endblock %}

@@ -6,5 +6,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'firstapp.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', 'requests.views.show_requests'),
+    url(r'^login/(?P<auth_error>\d+)/$', 'loginsys.views.auth_login'),
+    url(r'^login/$', 'loginsys.views.auth_login'),
+    url(r'^logout/$', 'loginsys.views.auth_logout'),
+
 )
